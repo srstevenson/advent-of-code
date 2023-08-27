@@ -1,0 +1,61 @@
+[tool.poetry]
+name = "advent-of-code"
+version = "0.1.0"
+description = "Solutions to Advent of Code problems"
+authors = ["Scott Stevenson <scott@stevenson.io>"]
+readme = "README.md"
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = ">=3.12,<4.0.0"
+advent-of-code-data = ">=2.0.1"
+
+[tool.poetry.scripts]
+next-day = "advent_of_code:initialise_next_day"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.mypy]
+check_untyped_defs = true
+disallow_any_unimported = true
+disallow_untyped_defs = true
+enable_error_code = ["ignore-without-code"]
+no_implicit_optional = true
+show_error_codes = true
+strict = true
+warn_no_return = true
+warn_redundant_casts = true
+warn_return_any = true
+warn_unreachable = true
+warn_unused_configs = true
+warn_unused_ignores = true
+
+[[tool.mypy.overrides]]
+module = "aocd"
+ignore_missing_imports = true
+
+[tool.ruff]
+target-version = "py312"
+
+[tool.ruff.lint]
+ignore = [
+  "COM812",
+  "D",
+  "DTZ002",
+  "EM101",
+  "INP001",
+  "ISC001",
+  "PLR2004",
+  "S324",
+  "T201",
+  "TRY003",
+]
+select = ["ALL"]
+
+[tool.ruff.lint.isort]
+split-on-trailing-comma = false
+
+[tool.ruff.format]
+skip-magic-trailing-comma = true
