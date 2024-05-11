@@ -15,10 +15,10 @@ repos:
         args: ["--fix"]
       - id: ruff-format
 
-  - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v1.10.0
+  - repo: https://github.com/RobertCraigie/pyright-python
+    rev: v1.1.362
     hooks:
-      - id: mypy
+      - id: pyright
 
   - repo: https://github.com/nikaro/taplo-pre-commit
     rev: 0.1.0

@@ -7,7 +7,7 @@ def load_input() -> str:
 
 def count_houses(directions: str, *, use_robot: bool = False) -> int:
     x, y = 0, 0
-    visited = {(x, y)}
+    visited: set[tuple[int, int]] = {(x, y)}
     if use_robot:
         xr, yr = 0, 0
     for d in directions:
@@ -21,7 +21,7 @@ def count_houses(directions: str, *, use_robot: bool = False) -> int:
             x -= 1
         visited.add((x, y))
         if use_robot:
-            x, y, xr, yr = xr, yr, x, y
+            x, y, xr, yr = xr, yr, x, y  # type: ignore[reportPossiblyUnboundVariable]
     return len(visited)
 
 

@@ -3,7 +3,7 @@ from itertools import product
 from pathlib import Path
 from typing import NamedTuple
 
-import aocd
+import aocd  # type: ignore[reportMissingImports]
 
 SOLUTION_TEMPLATE = """
 from pathlib import Path
