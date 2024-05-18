@@ -47,10 +47,10 @@ def next_uninitialised_day() -> Day | None:
 
 
 def initialise_day(day: Day) -> None:
-    day.directory.mkdir(parents=True)
     input_data = aocd.get_data(year=day.year, day=day.day)
-    (day.directory / "input.txt").write_text(input_data)
-    (day.directory / f"day{day.day:0>2}.py").write_text(SOLUTION_TEMPLATE)
+    day.directory.mkdir(parents=True)
+    day.directory.joinpath("input.txt").write_text(input_data)
+    day.directory.joinpath(f"day{day.day:0>2}.py").write_text(SOLUTION_TEMPLATE)
 
 
 def initialise_next_day() -> None:
