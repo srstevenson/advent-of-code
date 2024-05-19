@@ -9,18 +9,18 @@ repos:
       - id: trailing-whitespace
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.4.4
+    rev: v0.4.5
     hooks:
       - id: ruff
         args: ["--fix"]
       - id: ruff-format
 
   - repo: https://github.com/RobertCraigie/pyright-python
-    rev: v1.1.363
+    rev: v1.1.364
     hooks:
       - id: pyright
 
   - repo: https://github.com/nikaro/taplo-pre-commit
-    rev: 0.1.0
+    rev: 0.1.1
     hooks:
       - id: taplo-format
