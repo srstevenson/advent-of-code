@@ -1,0 +1,86 @@
+version = 1
+requires-python = ">=3.12"
+
+[[package]]
+name = "advent-of-code"
+version = "0.1.0"
+source = { editable = "." }
+dependencies = [
+    { name = "advent-of-code-data" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "advent-of-code-data", specifier = ">=2.0.1" }]
+
+[[package]]
+name = "advent-of-code-data"
+version = "2.0.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "aocd-example-parser" },
+    { name = "beautifulsoup4" },
+    { name = "pebble" },
+    { name = "tzdata", marker = "platform_system == 'Windows'" },
+    { name = "urllib3" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/1e/5b/ad4e02dbdadebdb27272333f30c6762989b7733b40d77a5dcb7cb5d71707/advent-of-code-data-2.0.1.tar.gz", hash = "sha256:b5f5fd84a25124633a444916a9ac8a424e8cbd7f346a68ccb34dc1f3460d2b9e", size = 44359 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/38/7b/f8f12f28cc6e462de084f1d8f1905bc8db524a1e9ead90d0a59bdcb06bbb/advent_of_code_data-2.0.1-py3-none-any.whl", hash = "sha256:a9ab6dcd1c39df17b7b33e7f2baa187d85c89c59f4ad15cfdbc00e18144251ad", size = 36478 },
+]
+
+[[package]]
+name = "aocd-example-parser"
+version = "2023.12.17"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/a7/9a/a9aa78ad5dfcfeb15a0de0084c67dd379065d9d3ab26fe788256c9f4c07e/aocd_example_parser-2023.12.17.tar.gz", hash = "sha256:40c245c83b070529b7368257aa9bb3a68d8ba0b8ca139e1b620527ad681740e2", size = 14175 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/cb/d8/726f61fe4f1699bfa29398aa0c78f0efe168af16b982c9990d1e13d59e5e/aocd_example_parser-2023.12.17-py3-none-any.whl", hash = "sha256:ebdc7f0612803c91c2759cbf5be0608ca0d6660dab8f3231fdca1418fa585665", size = 12586 },
+]
+
+[[package]]
+name = "beautifulsoup4"
+version = "4.12.3"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "soupsieve" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/b3/ca/824b1195773ce6166d388573fc106ce56d4a805bd7427b624e063596ec58/beautifulsoup4-4.12.3.tar.gz", hash = "sha256:74e3d1928edc070d21748185c46e3fb33490f22f52a3addee9aee0f4f7781051", size = 581181 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/b1/fe/e8c672695b37eecc5cbf43e1d0638d88d66ba3a44c4d321c796f4e59167f/beautifulsoup4-4.12.3-py3-none-any.whl", hash = "sha256:b80878c9f40111313e55da8ba20bdba06d8fa3969fc68304167741bbf9e082ed", size = 147925 },
+]
+
+[[package]]
+name = "pebble"
+version = "5.0.7"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/34/9d/c7a0c8cfb32f532c63a4ef816b8bcf03d6e6ef63617713fb0953cfe7052c/Pebble-5.0.7.tar.gz", hash = "sha256:2784c147766f06388cea784084b14bec93fdbaa793830f1983155aa330a2a6e4", size = 32054 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/da/31/ac6157816f5ed9440f3ad8744dc171f51ec59cc6c0b50c70d3c8a09add2f/Pebble-5.0.7-py3-none-any.whl", hash = "sha256:f1742f2a62e8544e722c7b387211fb1a06038ca8cda322e5d55c84c793fd8d7d", size = 30958 },
+]
+
+[[package]]
+name = "soupsieve"
+version = "2.6"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/d7/ce/fbaeed4f9fb8b2daa961f90591662df6a86c1abf25c548329a86920aedfb/soupsieve-2.6.tar.gz", hash = "sha256:e2e68417777af359ec65daac1057404a3c8a5455bb8abc36f1a9866ab1a51abb", size = 101569 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/d1/c2/fe97d779f3ef3b15f05c94a2f1e3d21732574ed441687474db9d342a7315/soupsieve-2.6-py3-none-any.whl", hash = "sha256:e72c4ff06e4fb6e4b5a9f0f55fe6e81514581fca1515028625d0f299c602ccc9", size = 36186 },
+]
+
+[[package]]
+name = "tzdata"
+version = "2024.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/74/5b/e025d02cb3b66b7b76093404392d4b44343c69101cc85f4d180dd5784717/tzdata-2024.1.tar.gz", hash = "sha256:2674120f8d891909751c38abcdfd386ac0a5a1127954fbc332af6b5ceae07efd", size = 190559 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/65/58/f9c9e6be752e9fcb8b6a0ee9fb87e6e7a1f6bcab2cdc73f02bb7ba91ada0/tzdata-2024.1-py2.py3-none-any.whl", hash = "sha256:9068bc196136463f5245e51efda838afa15aaeca9903f49050dfa2679db4d252", size = 345370 },
+]
+
+[[package]]
+name = "urllib3"
+version = "2.2.2"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/43/6d/fa469ae21497ddc8bc93e5877702dca7cb8f911e337aca7452b5724f1bb6/urllib3-2.2.2.tar.gz", hash = "sha256:dd505485549a7a552833da5e6063639d0d177c04f23bc3864e41e5dc5f612168", size = 292266 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/ca/1c/89ffc63a9605b583d5df2be791a27bc1a42b7c32bab68d3c8f2f73a98cd4/urllib3-2.2.2-py3-none-any.whl", hash = "sha256:a448b2f64d686155468037e1ace9f2d2199776e17f0a46610480d311f73e3472", size = 121444 },
+]
