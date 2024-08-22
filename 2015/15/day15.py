@@ -20,7 +20,7 @@ def load_input() -> dict[str, Properties]:
         r"(\w+): capacity (-?\d+), durability (-?\d+), flavor (-?\d+), "
         r"texture (-?\d+), calories (-?\d+)"
     )
-    properties = {}
+    properties: dict[str, Properties] = {}
     lines = Path(__file__).parent.joinpath("input.txt").read_text().strip().splitlines()
     for line in lines:
         if match := pattern.fullmatch(line):

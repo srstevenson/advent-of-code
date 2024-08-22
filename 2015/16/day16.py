@@ -17,7 +17,7 @@ EVIDENCE = {
 
 def load_input() -> dict[int, dict[str, int]]:
     pattern = re.compile(r"Sue (\d+): (\w+): (\d+), (\w+): (\d+), (\w+): (\d+)")
-    aunts = {}
+    aunts: dict[int, dict[str, int]] = {}
     lines = Path(__file__).parent.joinpath("input.txt").read_text().strip().splitlines()
     for line in lines:
         if m := pattern.fullmatch(line):

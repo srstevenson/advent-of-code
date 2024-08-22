@@ -12,7 +12,7 @@ def decompress(data: str, *, recurse: bool) -> int:
     while i < len(data):
         if data[i] == "(":
             i += 1
-            marker = []
+            marker: list[str] = []
             while data[i] != ")":
                 marker.append(data[i])
                 i += 1

@@ -35,7 +35,7 @@ def part_2(instructions: list[str]) -> str:
             xp = min(max(x + STEPS[step][1], 0), 4)
             if keypad[yp][xp]:
                 y, x = yp, xp
-        code += keypad[y][x]
+        code += str(keypad[y][x])
     return code
 
 

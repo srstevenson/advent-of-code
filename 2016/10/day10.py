@@ -13,7 +13,7 @@ def load_input() -> list[str]:
 
 
 def initialise(instructions: list[str]) -> dict[int, set[int]]:
-    bots = defaultdict(set)
+    bots: defaultdict[int, set[int]] = defaultdict(set)
     for inst in instructions:
         if match := VALUE_PATTERN.fullmatch(inst):
             value, bot = map(int, match.groups())
@@ -23,7 +23,7 @@ def initialise(instructions: list[str]) -> dict[int, set[int]]:
 
 def part_1(instructions: list[str]) -> int:
     bots = initialise(instructions)
-    done = set()
+    done: set[int] = set()
 
     while True:
         for inst in instructions:
@@ -41,9 +41,10 @@ def part_1(instructions: list[str]) -> int:
                     done.add(bot)
 
 
-def part_2(instructions: list[str]) -> None:
+def part_2(instructions: list[str]) -> int:
     bots = initialise(instructions)
-    outputs, done = {}, set()
+    outputs: dict[int, int] = {}
+    done: set[int] = set()
 
     while not {0, 1, 2}.issubset(outputs):
         for inst in instructions:

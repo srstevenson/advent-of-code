@@ -25,7 +25,7 @@ class Instruction(NamedTuple):
 
 def load_input() -> list[Instruction]:
     pattern = re.compile(r"([a-z ]*) (\d+),(\d+) through (\d+),(\d+)")
-    instructions = []
+    instructions: list[Instruction] = []
     lines = Path(__file__).parent.joinpath("input.txt").read_text().strip().splitlines()
     for line in lines:
         if match := pattern.fullmatch(line):

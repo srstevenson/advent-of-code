@@ -1,7 +1,6 @@
 import functools
 import operator
 from pathlib import Path
-from typing import cast
 
 OPERATORS = {
     "AND": operator.and_,
@@ -13,7 +12,7 @@ OPERATORS = {
 
 def load_input() -> dict[str, str]:
     lines = Path(__file__).parent.joinpath("input.txt").read_text().strip().splitlines()
-    circuit = {}
+    circuit: dict[str, str] = {}
     for line in lines:
         source, _, dest = line.partition(" -> ")
         circuit[dest] = source
@@ -35,7 +34,7 @@ def signal_on_a(circuit: dict[str, str]) -> int:
             return ~signal(tokens[1]) & 65535
 
         left, gate, right = tokens
-        return cast(int, OPERATORS[gate](signal(left), signal(right)))
+        return OPERATORS[gate](signal(left), signal(right))
 
     return signal(circuit["a"])
 

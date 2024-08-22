@@ -24,7 +24,9 @@ def part_1(ips: list[str]) -> int:
 def part_2(ips: list[str]) -> int:
     support_ssl = 0
     for ip in ips:
-        abas, babs, in_hs = set(), set(), False
+        abas: set[str] = set()
+        babs: set[str] = set()
+        in_hs = False
         for i in range(len(ip) - 2):
             if ip[i] in "[]":
                 in_hs = not in_hs

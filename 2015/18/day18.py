@@ -9,7 +9,7 @@ NEIGHBOURS = [xy for xy in product([-1, 0, 1], repeat=2) if xy != (0, 0)]
 
 
 def load_input() -> Grid:
-    grid = defaultdict(bool)
+    grid: Grid = defaultdict(bool)
     lines = Path(__file__).parent.joinpath("input.txt").read_text().strip().splitlines()
     for y, row in enumerate(lines):
         for x, light in enumerate(row):

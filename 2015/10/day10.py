@@ -9,15 +9,14 @@ def load_input() -> list[int]:
 
 def look_and_say(sequence: list[int], iters: int) -> int:
     for _ in range(iters):
-        next_sequence = []
+        next_sequence: list[int] = []
         last_digit, count = sequence[0], 1
         for digit in sequence[1:]:
             if digit != last_digit:
                 next_sequence.extend([count, last_digit])
                 last_digit, count = digit, 0
             count += 1
-        if last_digit is not None:
-            next_sequence.extend([count, last_digit])
+        next_sequence.extend([count, last_digit])
         sequence = next_sequence
     return len(sequence)
 

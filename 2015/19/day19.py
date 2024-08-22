@@ -4,7 +4,7 @@ from pathlib import Path
 
 
 def load_input() -> tuple[str, dict[str, list[str]]]:
-    replacements = defaultdict(list)
+    replacements: defaultdict[str, list[str]] = defaultdict(list)
     lines = Path(__file__).parent.joinpath("input.txt").read_text().strip().splitlines()
     for line in lines:
         left, _, right = line.strip().partition(" => ")
@@ -16,7 +16,7 @@ def load_input() -> tuple[str, dict[str, list[str]]]:
 
 
 def part_1(molecule: str, replacements: Mapping[str, Iterable[str]]) -> int:
-    molecules = set()
+    molecules: set[str] = set()
     for source, targets in replacements.items():
         for i in range(len(molecule) - len(source) + 1):
             if molecule[i : i + len(source)] == source:

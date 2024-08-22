@@ -8,7 +8,7 @@ def load_input() -> str:
 
 
 def part_1(door_id: str) -> str:
-    password = []
+    password: list[str] = []
     for index in itertools.count():
         digest = hashlib.md5(f"{door_id}{index}".encode()).hexdigest()
         if digest.startswith("00000"):

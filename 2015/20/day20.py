@@ -10,7 +10,7 @@ def load_input() -> int:
 
 @functools.cache
 def factors(n: int) -> list[int]:
-    factors = []
+    factors: list[int] = []
     for i in range(1, math.isqrt(n)):
         if n % i == 0:
             factors.append(i)

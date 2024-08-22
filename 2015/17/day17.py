@@ -18,7 +18,7 @@ def load_input() -> list[int]:
 
 
 def part_1(capacities: Sequence[int]) -> int:
-    ways = defaultdict(int)
+    ways: defaultdict[int, int] = defaultdict(int)
     ways[0] = 1
     for capacity in capacities:
         for total in reversed(range(151)):

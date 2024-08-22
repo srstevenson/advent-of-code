@@ -24,7 +24,7 @@ def load_input() -> dict[str, Stats]:
         r"(\w+) can fly (\d+) km/s for (\d+) seconds, "
         r"but then must rest for (\d+) seconds\."
     )
-    deer = {}
+    deer: dict[str, Stats] = {}
     lines = Path(__file__).parent.joinpath("input.txt").read_text().strip().splitlines()
     for line in lines:
         if match := pattern.fullmatch(line):

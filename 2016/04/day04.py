@@ -12,7 +12,7 @@ class Room(NamedTuple):
 
 
 def load_input() -> list[Room]:
-    rooms = []
+    rooms: list[Room] = []
     pattern = re.compile(r"(\S+)-(\d+)\[(\w+)\]")
     lines = Path(__file__).parent.joinpath("input.txt").read_text().strip().splitlines()
     for line in lines:

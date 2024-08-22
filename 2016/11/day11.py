@@ -56,8 +56,8 @@ def generate_next_states(floor: int, state: State) -> Generator[tuple[int, State
 
 @cache
 def canonicalise_state(state: State) -> CanonicalState:
-    gens = {}
-    chips = {}
+    gens: dict[str, int] = {}
+    chips: dict[str, int] = {}
     for floor, items in enumerate(state):
         for item in items:
             if item.endswith("g"):
