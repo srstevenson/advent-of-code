@@ -5,7 +5,7 @@ from pathlib import Path
 
 
 def load_input() -> int:
-    return int(Path(__file__).parent.joinpath("input.txt").read_text())
+    return int(Path(__file__).parent.joinpath("input.txt").read_text().strip())
 
 
 @functools.cache

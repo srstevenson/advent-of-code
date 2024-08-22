@@ -5,7 +5,11 @@ from pathlib import Path
 def load_input() -> list[list[int]]:
     return [
         [int(side) for side in line.split()]
-        for line in Path(__file__).parent.joinpath("input.txt").read_text().splitlines()
+        for line in Path(__file__)
+        .parent.joinpath("input.txt")
+        .read_text()
+        .strip()
+        .splitlines()
     ]
 
 

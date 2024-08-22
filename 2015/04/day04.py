@@ -4,7 +4,7 @@ from pathlib import Path
 
 
 def load_input() -> str:
-    return Path(__file__).parent.joinpath("input.txt").read_text()
+    return Path(__file__).parent.joinpath("input.txt").read_text().strip()
 
 
 def mine(key: str, prefix: str) -> int:

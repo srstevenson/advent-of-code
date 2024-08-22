@@ -7,7 +7,7 @@ from typing import NamedTuple, cast
 
 
 def load_input() -> tuple[int, int]:
-    lines = Path(__file__).parent.joinpath("input.txt").read_text().splitlines()
+    lines = Path(__file__).parent.joinpath("input.txt").read_text().strip().splitlines()
     return cast(tuple[int, int], tuple(int(line.split(": ")[1]) for line in lines))
 
 

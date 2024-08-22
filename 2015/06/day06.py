@@ -26,7 +26,7 @@ class Instruction(NamedTuple):
 def load_input() -> list[Instruction]:
     pattern = re.compile(r"([a-z ]*) (\d+),(\d+) through (\d+),(\d+)")
     instructions = []
-    lines = Path(__file__).parent.joinpath("input.txt").read_text().splitlines()
+    lines = Path(__file__).parent.joinpath("input.txt").read_text().strip().splitlines()
     for line in lines:
         if match := pattern.fullmatch(line):
             action, *coords = match.groups()

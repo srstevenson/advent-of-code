@@ -21,7 +21,7 @@ def load_input() -> dict[str, Properties]:
         r"texture (-?\d+), calories (-?\d+)"
     )
     properties = {}
-    lines = Path(__file__).parent.joinpath("input.txt").read_text().splitlines()
+    lines = Path(__file__).parent.joinpath("input.txt").read_text().strip().splitlines()
     for line in lines:
         if match := pattern.fullmatch(line):
             ingredient, *props = match.groups()

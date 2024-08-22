@@ -4,7 +4,7 @@ STEPS = {"U": (-1, 0), "D": (1, 0), "L": (0, -1), "R": (0, 1)}
 
 
 def load_input() -> list[str]:
-    return Path(__file__).parent.joinpath("input.txt").read_text().splitlines()
+    return Path(__file__).parent.joinpath("input.txt").read_text().strip().splitlines()
 
 
 def part_1(instructions: list[str]) -> str:

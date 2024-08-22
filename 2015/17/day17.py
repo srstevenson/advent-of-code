@@ -6,7 +6,14 @@ from pathlib import Path
 
 def load_input() -> list[int]:
     return list(
-        map(int, Path(__file__).parent.joinpath("input.txt").read_text().splitlines())
+        map(
+            int,
+            Path(__file__)
+            .parent.joinpath("input.txt")
+            .read_text()
+            .strip()
+            .splitlines(),
+        )
     )
 
 

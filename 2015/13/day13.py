@@ -11,7 +11,7 @@ def load_input() -> Happiness:
     pattern = re.compile(
         r"(\w+) would (\w+) (\d+) happiness units by sitting next to (\w+)\."
     )
-    lines = Path(__file__).parent.joinpath("input.txt").read_text().splitlines()
+    lines = Path(__file__).parent.joinpath("input.txt").read_text().strip().splitlines()
     for line in lines:
         if match := pattern.fullmatch(line):
             left, sign, amount, right = match.groups()

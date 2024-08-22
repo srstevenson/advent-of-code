@@ -5,7 +5,7 @@ from pathlib import Path
 
 def load_input() -> tuple[str, dict[str, list[str]]]:
     replacements = defaultdict(list)
-    lines = Path(__file__).parent.joinpath("input.txt").read_text().splitlines()
+    lines = Path(__file__).parent.joinpath("input.txt").read_text().strip().splitlines()
     for line in lines:
         left, _, right = line.strip().partition(" => ")
         if right:

@@ -9,7 +9,7 @@ GIVES_PATTERN = re.compile(
 
 
 def load_input() -> list[str]:
-    return Path(__file__).parent.joinpath("input.txt").read_text().splitlines()
+    return Path(__file__).parent.joinpath("input.txt").read_text().strip().splitlines()
 
 
 def initialise(instructions: list[str]) -> dict[int, set[int]]:

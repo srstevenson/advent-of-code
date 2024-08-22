@@ -25,7 +25,7 @@ def load_input() -> dict[str, Stats]:
         r"but then must rest for (\d+) seconds\."
     )
     deer = {}
-    lines = Path(__file__).parent.joinpath("input.txt").read_text().splitlines()
+    lines = Path(__file__).parent.joinpath("input.txt").read_text().strip().splitlines()
     for line in lines:
         if match := pattern.fullmatch(line):
             name, *specs = match.groups()

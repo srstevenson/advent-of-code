@@ -12,7 +12,7 @@ OPERATORS = {
 
 
 def load_input() -> dict[str, str]:
-    lines = Path(__file__).parent.joinpath("input.txt").read_text().splitlines()
+    lines = Path(__file__).parent.joinpath("input.txt").read_text().strip().splitlines()
     circuit = {}
     for line in lines:
         source, _, dest = line.partition(" -> ")

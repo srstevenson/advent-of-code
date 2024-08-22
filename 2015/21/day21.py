@@ -50,7 +50,7 @@ RINGS = [
 
 
 def load_input() -> Character:
-    lines = Path(__file__).parent.joinpath("input.txt").read_text().splitlines()
+    lines = Path(__file__).parent.joinpath("input.txt").read_text().strip().splitlines()
     return Character(
         **{
             (stat := line.partition(": "))[0].lower().replace(" ", "_"): int(stat[2])

@@ -4,7 +4,7 @@ from typing import cast
 
 
 def load_input() -> tuple[int, int]:
-    text = Path(__file__).parent.joinpath("input.txt").read_text()
+    text = Path(__file__).parent.joinpath("input.txt").read_text().strip()
     if match := re.search(r"row (\d+), column (\d+).", text):
         return cast(tuple[int, int], tuple(map(int, match.groups())))
     raise RuntimeError("Invalid input file")

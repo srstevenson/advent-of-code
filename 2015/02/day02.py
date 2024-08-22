@@ -12,7 +12,11 @@ class Box(NamedTuple):
 def load_input() -> list[Box]:
     return [
         Box(*map(int, line.split("x")))
-        for line in Path(__file__).parent.joinpath("input.txt").read_text().splitlines()
+        for line in Path(__file__)
+        .parent.joinpath("input.txt")
+        .read_text()
+        .strip()
+        .splitlines()
     ]
 
 

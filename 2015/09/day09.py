@@ -10,7 +10,7 @@ Distances = dict[str, dict[str, int]]
 def load_input() -> Distances:
     pattern = re.compile(r"(\w+) to (\w+) = (\d+)")
     distances: Distances = defaultdict(dict)
-    lines = Path(__file__).parent.joinpath("input.txt").read_text().splitlines()
+    lines = Path(__file__).parent.joinpath("input.txt").read_text().strip().splitlines()
     for line in lines:
         if m := pattern.fullmatch(line):
             for i, j in [(1, 2), (2, 1)]:

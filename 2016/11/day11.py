@@ -15,7 +15,7 @@ CanonicalState = tuple[tuple[int, int], ...]
 
 def load_input() -> State:
     state: list[list[str]] = [[], [], [], []]
-    lines = Path(__file__).parent.joinpath("input.txt").read_text().splitlines()
+    lines = Path(__file__).parent.joinpath("input.txt").read_text().strip().splitlines()
     for floor, line in reversed(list(enumerate(lines))):
         for pattern, suffix in [(GENERATOR_PATTERN, "g"), (MICROCHIP_PATTERN, "m")]:
             for element in pattern.findall(line):
