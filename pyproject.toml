@@ -5,7 +5,7 @@ description = "Solutions to Advent of Code problems"
 authors = [{ name = "Scott Stevenson", email = "scott@stevenson.io" }]
 readme = "README.md"
 license = { text = "MIT" }
-requires-python = ">=3.12"
+requires-python = ">=3.13"
 dependencies = ["advent-of-code-data>=2.0.1"]
 
 [project.scripts]
@@ -19,7 +19,7 @@ build-backend = "hatchling.build"
 typeCheckingMode = "strict"
 
 [tool.ruff]
-target-version = "py312"
+target-version = "py313"
 
 [tool.ruff.lint]
 ignore = [
